@@ -15,13 +15,13 @@ public class Rectangle {
 		return area;
 	}
 	
-	public double parameter(double length , double width) {
+	public double parameter() {
 		double parameter = 2.0 * (length + width);
 		return parameter;
 	}
 	
-	public boolean ifSmallererThan(double area1, double area2) {
-		if(area1 < area2)
+	public boolean isSmallerThan(Rectangle b) {
+		if(a.area() < b.area())
 			return true;
 		else 
 			return false;
@@ -32,8 +32,10 @@ public class Rectangle {
 		Rectangle a = new Rectangle(10.2 , 5.3);
 		Rectangle b = new Rectangle(11.5 , 4.7);
 		
+		boolean smaller = a.isSmallerThan(a,b);
 		System.out.println(a.area());
 		System.out.println(b.area());
+		System.out.println(a.isSmallerThan(a,b));
 	}
 
 }
